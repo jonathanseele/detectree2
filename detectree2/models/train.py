@@ -329,8 +329,16 @@ def get_tree_dicts(directory: str, classes: List[str] = None, classes_at: str = 
 
         # filename = os.path.join(directory, img_anns["imagePath"])
         filename = img_anns["imagePath"]
-        if filename[:8] != '/content':
-            filename = '/content/drive/My Drive/WeCanopy/' + filename
+        prefix = "/flight"
+        index = filename.find(prefix)
+        if index != -1:
+        # Slice the string from the start of the prefix
+            filename = filename[index:]
+        else:
+        # If the prefix is not found, return the original string
+            filename = filename
+        filename = '/content/drive/My Drive/WeCanopy' + filename
+
 
         print(filename)
         # Make sure we have the correct height and width
