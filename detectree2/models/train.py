@@ -337,7 +337,7 @@ def get_tree_dicts(directory: str, classes: List[str] = None, classes_at: str = 
         else:
         # If the prefix is not found, return the original string
             filename = filename
-        filename = '/content/drive/My Drive/WeCanopy' + filename
+        filename = '/content/drive/My Drive/WeCanopy/' + filename
 
 
         print(filename)
