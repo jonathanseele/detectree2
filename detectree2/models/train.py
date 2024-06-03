@@ -328,7 +328,8 @@ def get_tree_dicts(directory: str, classes: List[str] = None, classes_at: str = 
         record: Dict[str, Any] = {}
 
         # filename = os.path.join(directory, img_anns["imagePath"])
-        filename = img_anns["imagePath"]
+        #filename = img_anns["imagePath"]
+        filename = '/content/drive/My Drive/WeCanopy/' + img_anns["imagePath"]
 
         # Make sure we have the correct height and width
         height, width = cv2.imread(filename).shape[:2]
